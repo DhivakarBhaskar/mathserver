@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamp Filament Power Calculator</title>
+    <style>
+        body 
+        {
+            font-family:Arial, sans-serif;
+            margin:20px;
+            background-color: #495280ff;
+        }
+        label 
+        {
+            display: inline-block;
+            width: 150px;
+            font-size:19px;
+        }
+        input[type="number"] 
+        {
+            width: 250px;
+        }
+        button
+        {
+            margin-top:10px;
+            width:100px;
+            cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color:silver;
+}
+        
+        h3
+        {
+            color: green;
+        }  
+        .container
+        {
+            max-width:700px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+            margin-top:20%;
+            background-color: #f9f9f9;
+            height:300px;
+        } 
+
+
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+    <h1>Lamp Filament Power Calculator</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="intensity">Intensity: </label>
+        <input type="number" id="intensity" name="intensity" step="any" min="0" required><br><br>
+<br>
+        <label for="resistance">Resistance: </label>
+        <input type="number" id="resistance" name="resistance" step="any" min="0" required><br><br>
+<br>
+        <button type="submit">Calculate Power</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    {% if power %}
+        <h3>Power (P) = {{ power|floatformat:2 }} Watts</h3>
+    {% endif %}
+</div>
+</center>
+</body>
+</html>
