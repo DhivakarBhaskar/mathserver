@@ -134,11 +134,13 @@ def calculate_power(request):
 ```
 # SERVER SIDE PROCESSING:
 
-![alt text](<Screenshot 2025-09-30 152343.png>)
+<img width="599" height="137" alt="Screenshot 2025-09-30 152343" src="https://github.com/user-attachments/assets/43b86a1c-a4c1-4955-949e-65b7068ae3a9" />
+
 
 # HOMEPAGE:
 
-![alt text](<Screenshot 2025-09-30 152309.png>)
+<img width="1257" height="575" alt="Screenshot 2025-09-30 152309" src="https://github.com/user-attachments/assets/34d672cf-425e-444b-88ff-2e390e15ab0c" />
+
 
 # RESULT:
 The program for performing server side processing is completed successfully.
